@@ -34,8 +34,13 @@
             Blog
           </a>
         </div>
+
         <div>
-          <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
+          <% if current_person %>
+            <%= link_to "Logout", destroy_person_session_path, class: "inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0", method: :delete %>
+          <% else %>
+            <%= link_to "Login", new_person_session_path, class: "inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0" %>
+          <% end %>
         </div>
       </div>
     </nav>

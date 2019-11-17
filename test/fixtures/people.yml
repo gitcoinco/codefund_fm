@@ -1,0 +1,40 @@
+# == Schema Information
+#
+# Table name: people
+#
+#  id                     :bigint           not null, primary key
+#  admin                  :boolean          default(FALSE)
+#  bio                    :text
+#  editor                 :boolean          default(FALSE)
+#  email                  :string           default(""), not null
+#  encrypted_password     :string           default(""), not null
+#  github_handle          :string
+#  handle                 :string
+#  host                   :boolean          default(FALSE)
+#  linkedin_handle        :string
+#  name                   :string
+#  remember_created_at    :datetime
+#  reset_password_sent_at :datetime
+#  reset_password_token   :string
+#  twitter_handle         :string
+#  website                :string
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#
+# Indexes
+#
+#  index_people_on_email                 (email) UNIQUE
+#  index_people_on_reset_password_token  (reset_password_token) UNIQUE
+#
+
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value

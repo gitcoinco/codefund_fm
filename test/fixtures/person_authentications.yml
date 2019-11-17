@@ -1,0 +1,31 @@
+# == Schema Information
+#
+# Table name: person_authentications
+#
+#  id                         :bigint           not null, primary key
+#  params                     :text
+#  token                      :string
+#  token_expires_at           :datetime
+#  uid                        :string
+#  created_at                 :datetime         not null
+#  updated_at                 :datetime         not null
+#  authentication_provider_id :integer
+#  person_id                  :integer
+#
+# Indexes
+#
+#  index_person_authentications_on_authentication_provider_id  (authentication_provider_id)
+#  index_person_authentications_on_person_id                   (person_id)
+#
+
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value
